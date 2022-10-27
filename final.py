@@ -33,7 +33,7 @@ button_1 =Button(root,text = "Refresh",command = refresh).place(x=80,y=550)
 
 
 
-
+#adding menu bar
 menubar=Menu(root)
 #adding optins to menubar
 file=Menu(menubar, tearoff=0)
@@ -78,7 +78,7 @@ database=mysql.connector.connect(
     password="root"
     )
 cursor=database.cursor()
-cursor.execute("use exibition")
+cursor.execute("use exibition")   #exibition: name of the database
 navar=StringVar()
 covar=StringVar()
 shvar=StringVar()
@@ -91,8 +91,8 @@ def submit():
     shelfn=shvar.get()
     
     
-    sql="insert into library (book_name,book_code,shelf_number) values(%s,%s,%s)"
-    t=(nam,bookcod,shelfn)
+    sql="insert into library (book_name,book_code,shelf_number) values(%s,%s,%s)"  #library: table to keep the record of the book
+    t=(nam,bookcod,shelfn)   
     cursor.execute(sql,t)
     database.commit()
     
@@ -201,8 +201,8 @@ def submit():
     
     
     
-                      
-    cmd="update library_data set return_date=%s where reg_no=%s and book_code=%s"
+                       
+    cmd="update library_data set return_date=%s where reg_no=%s and book_code=%s"   #library_data : another table to keep the record of the issued and returned books
     val=(ret,r,c)
     _cu_.execute(cmd,val)
     db_.commit()
