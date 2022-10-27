@@ -75,7 +75,7 @@ import mysql.connector
 database=mysql.connector.connect(
     host="localhost",
     user="root",
-    password="prem@2002"
+    password="root"
     )
 cursor=database.cursor()
 cursor.execute("use exibition")
@@ -122,7 +122,7 @@ import mysql.connector
 _database_=mysql.connector.connect(
     host="localhost",
     user="root",
-    password="prem@2002"
+    password="root"
     )
 _cursor_=_database_.cursor()
 _cursor_.execute("use exibition")
@@ -182,7 +182,7 @@ import mysql.connector
 db_=mysql.connector.connect(
     host="localhost",
     user="root",
-    password="prem@2002"
+    password="root"
     )
 _cu_=db_.cursor()
 _cu_.execute("use exibition")
@@ -279,7 +279,7 @@ import mysql.connector
 db=mysql.connector.connect(
     host="localhost",
     user="root",
-    password="prem@2002"
+    password="root"
     )
 cu=db.cursor()
 cu.execute("use exibition")
